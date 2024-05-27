@@ -11,8 +11,6 @@ This is the directions document for Project P1 NBody in CompSci 201 at Duke Univ
   - [The `NBody` Class](#the-nbody-class)
   - [`NBody` Methods](#nbody-methods)
   - [Note on Running the Simulation](#note-on-running-the-simulation)
-- [Analysis Questions](#analysis-questions)
-- [Submitting and Grading](#submitting-and-grading)
 
 ## Background (optional but encouraged)
 
@@ -21,7 +19,7 @@ This assignment heavily borrows from Princeton and Berkeley Computer Science and
 **Context:** In 1687, Isaac Newton formulated the principles governing the motion of two particles under the influence of their mutual gravitational attraction in his famous Principia. However, Newton was unable to solve the problem for three particles. Indeed, in general, solutions to systems of three or more particles must be approximated via numerical simulations.
 For a more complete understanding of the Physics you can reference [this document][Physics].
 
-In this assignment, you will write a program to simulate the motion of _N_ objects in a plane, mutually affected by gravitational forces, and animate the results. Such methods are widely used in cosmology, semiconductors, and fluid dynamics to study complex physical systems. Ultimately, you will be creating a driver program `NBody.java` that draws an animation of bodies moving in space interacting with each other subject to interacting and mutual gravitational forces. These bodies are modeled by the class `CelestialBody.java` that you'll implement and test independently of the simulation.
+In this assignment, you will write a program to simulate the motion of _N_ objects in a plane, mutually affected by gravitational forces, and animate the results. Such methods are widely used in cosmology, semiconductors, and fluid dynamics to study complex physical systems. Ultimately, you will be creating a driver program `NBody.java` that draws an animation of bodies moving in space interacting with each other subject to interacting and mutual gravitational forces. These celestial bodies (ex. planet or sun) are modeled by the class `CelestialBody.java` that you'll implement and test independently of the simulation.
 
 Below you can expand to see an animation of a completed project running with some planets in our solar system. The animation repeats after one earth year, your program continues until the simulation completes.
 
@@ -32,22 +30,12 @@ Below you can expand to see an animation of a completed project running with som
 </div>
 
 
-## Starter Code and Using Git
-
-See [the details document](docs/details.md) for information on using Git, starting the project, and more details. 
-
 
 ## Developing, Running, Testing Code
 
 You're given the outline of a class `CelestialBody` with stub or missing methods and a missing constructor. You'll add code so that the class `CelestialBody.java` works as described below. This class represents a celestial body such as a planet or a sun.  
 
 Finally, you will create a class `NBody.java` that drives a simulation between planets, suns, and celestial bodies interacting. This class will read a file of data that specifies the initial positions and masses of the bodies and then simulates their interaction over a set time period. The simulation will also animate the interactions between the bodies.
-
-### How to develop and test code
-
-There are classes provided in the code you get that help you test whether your constructor, getters, and interaction methods are correct. Running each `TestX` class will print *PASS* or *FAIL* messages to your terminal/console window. You should only proceed to the next step in development and coding when you've passed the current test. When these tests pass, there's a good chance your code is correct, but you may uncover additional errors when you run the `NBody` simulation.
-
-For each section below, you'll implement code in `CelestialBody`, then run a testing program you're given to see if the code you wrote passes the tests in each testing program. *Do not go to the next step* until your code passes each testing program.
 
 ### CB1: `CelestialBody` Variables, Constructor, and Getter Methods
 
@@ -254,16 +242,6 @@ As you iterate through the information for each of the `CelestialBody` objects i
 
 You can test this method using the supplied `TestReadBodies.java` class. 
 
-### The method NBody.main
-
-You'll see four TODO comments in the loop of the `main` method. Completing these will make your simulation run correctly and provide an animation of the simulation. The four TODOs are:
-
-1. Create an `xForces` array and `yForces` array. Each should have the same size as the number of bodies in the simulation. Both array should 
-have type `double[]`, these are arrays of double values.
-2. Calculate the net x and y forces for each body, storing these in the `xForces` and `yForces` arrays respectively. You can use the `CelestialBody` methods you wrote in previous steps above to do this.
-3. Call `update` on each body, using `dt` and the corresponding elements of these arrays as parameters. Notice the parameters in `update`, in particular the same value of `deltaT`, the first parameter, is passed to each `PlanetaryBody` object's `update` method. 
-4. Call `draw` on each body, again you'll need a loop and a call to the `draw` method (already implemented).
-
 ## Note on Running the Simulation
 
 When the simulation is over your code prints out the final state of the universe in the same format as the input, you can expand below for an example.
@@ -280,8 +258,5 @@ When the simulation is over your code prints out the final state of the universe
 | 2.4125e+10 | 5.2103e+10 | -4.3685e+04 | 2.0627e+04 | 3.3020e+23 | mercury.gif |
 | 5.6664e+05 | 7.0808e+06 | 1.0861e-01 | 1.0639e-01 | 1.9890e+30  |    sun.gif |
 | 1.0555e+11 | 2.3363e+10 |-7.5708e+03 | 3.4204e+04 | 4.8690e+24 |   venus.gif |
-
-
-The code for printing is given to you in the `NBody.java` you start with. This code isn't all that exciting (which is why we've provided a solution), but we'll need this method to work correctly to autograde your assignment. ***You should NOT print anything other than the final printing shown here***. This printing is done after your simulation completes. *If you use debugging print statements, be sure to remove them before testing in Gradescope.*
 
 When the simulation finishes, you'll need to close/quit the graphics window to be able to run another simulation. Use the red X button in the upper left of the graphics window to dismiss the window.
