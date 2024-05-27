@@ -1,11 +1,5 @@
 # Project 0: Person201
 
-## Obtaining Project Code and Project Details
-
-For details and faqs, see [this document](docs/details.md) that has information on git, Java, the classes here, and more. This current file you're reading has project and coding details, but the linked document has more Java and git details, particularly about starting to code. That linked document includes information about project workflow including submitting code and analysis for grading via _Gradescope_. *Be sure to check [this document](https://coursework.cs.duke.edu/201fall23/resources-201/-/blob/main/projectWorkflow.md) for how to use Git to obtain the project files, and workarounds if Git doesn't work yet for you. You'll need to refer to this P0 document when forking and cloning.
-
-Recall that according to class policy you should use Zoom to record the first 20 minutes you start coding -- not when you start reading, but when you're ready to code. You'll submit a URL for a cloud Zoom recording [using this link](https://bit.ly/201-p0-video).
-
 ## Goals
 
 * To modify a simple Java class, modify two driver programs, and create a new class to demonstrate understanding of classes, methods, and instance variables.
@@ -16,7 +10,7 @@ Recall that according to class policy you should use Zoom to record the first 20
 
 ## Developing the classes in Project P0: Person201
 
-When you fork and clone the project, you'll be working primarily within the src folder with .java files beginning with `Person201`. Your goal is to modify three programs/classes (`Person201.java`, `Person201Demo.java`, and `Person201NearbyDemo.java`) and create a new program (`Person201Farthest.java`) to generate the desired output. 
+My goal was to modify three programs/classes (`Person201.java`, `Person201Demo.java`, and `Person201NearbyDemo.java`) and create a new program (`Person201Farthest.java`) to generate the desired output. 
 
 
 ### Run `Person201Demo.java` and change `Person201.java`
